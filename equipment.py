@@ -20,124 +20,184 @@ equipmentSpace = 206
 check = pygame.image.load('check.png')
 
 def initializeGear():
-    equiped = {}
-    equipmentList = {}
-    equipmentImages = {}
+    equipmentInfo = {}
+    equipmentInfo['helmet1'] = {}
+    equipmentInfo['helmet2'] = {}
+    equipmentInfo['helmet3'] = {}
+    equipmentInfo['jacket1'] = {}
+    equipmentInfo['jacket2'] = {}
+    equipmentInfo['jacket3'] = {}
+    equipmentInfo['belt1'] = {}
+    equipmentInfo['belt2'] = {}
+    equipmentInfo['belt3'] = {}
+    equipmentInfo['pants1'] = {}
+    equipmentInfo['pants2'] = {}
+    equipmentInfo['pants3'] = {}
+    equipmentInfo['boots1'] = {}
+    equipmentInfo['boots2'] = {}
+    equipmentInfo['boots3'] = {}
+    equipmentInfo['goggles1'] = {}
+    equipmentInfo['goggles2'] = {}
+    equipmentInfo['goggles3'] = {}
+    equipmentInfo['wrist1'] = {}
+    equipmentInfo['wrist2'] = {}
+    equipmentInfo['wrist3'] = {}
+    equipmentInfo['gloves1'] = {}
+    equipmentInfo['gloves2'] = {}
+    equipmentInfo['gloves3'] = {}
+    equipmentInfo['bandolier1'] = {}
+    equipmentInfo['bandolier2'] = {}
+    equipmentInfo['bandolier3'] = {}
+    equipmentInfo['weapon1'] = {}
+    equipmentInfo['weapon2'] = {}
+    equipmentInfo['weapon3'] = {}
+
 
     #Create equipment displays using above specs
-    equipmentList['helmet1'] = pygame.Rect(50,50,equipmentSize, equipmentSize)
-    equipmentImages['helmet1'] = pygame.image.load('pimp.png')
-    equiped['helmet1'] = False
+    equipmentInfo['helmet1']['Button'] = pygame.Rect(50,50,equipmentSize, equipmentSize)
+    equipmentInfo['helmet1']['Image'] = pygame.image.load('pimp.png')
+    equipmentInfo['helmet1']['Equiped'] = False
+    equipmentInfo['helmet1']['Name'] = "Helm of Shaded Vision"
+    equipmentInfo['helmet1']['Bonus'] = "+1 Perception"
 
-    equipmentList['helmet2'] = pygame.Rect(equipmentSpace + 50,50,equipmentSize, equipmentSize)
-    equipmentImages['helmet2'] = pygame.image.load('archer.png')
-    equiped['helmet2'] = False
+    equipmentInfo['helmet2']['Button'] = pygame.Rect(equipmentSpace + 50,50,equipmentSize, equipmentSize)
+    equipmentInfo['helmet2']['Image'] = pygame.image.load('archer.png')
+    equipmentInfo['helmet2']['Equiped'] = False
 
-    equipmentList['helmet3'] = pygame.Rect(2*equipmentSpace + 50,50,equipmentSize, equipmentSize)
-    equipmentImages['helmet3'] = pygame.image.load('bucket.png')
-    equiped['helmet3'] = False
+    equipmentInfo['helmet3']['Button'] = pygame.Rect(2*equipmentSpace + 50,50,equipmentSize, equipmentSize)
+    equipmentInfo['helmet3']['Image'] = pygame.image.load('bucket.png')
+    equipmentInfo['helmet3']['Equiped'] = False
 
-    equipmentList['jacket1'] = pygame.Rect(50,equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['jacket1'] = False
+    equipmentInfo['jacket1']['Button'] = pygame.Rect(50,equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['jacket1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['jacket1']['Equiped'] = False
 
-    equipmentList['jacket2'] = pygame.Rect(equipmentSpace + 50,equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['jacket2'] = False
+    equipmentInfo['jacket2']['Button'] = pygame.Rect(equipmentSpace + 50,equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['jacket2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['jacket2']['Equiped'] = False
 
-    equipmentList['jacket3'] = pygame.Rect(2*equipmentSpace + 50,equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['jacket3'] = False
+    equipmentInfo['jacket3']['Button'] = pygame.Rect(2*equipmentSpace + 50,equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['jacket3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['jacket3']['Equiped'] = False
 
-    equipmentList['belt1'] = pygame.Rect(50,2*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['belt1'] = False
+    equipmentInfo['belt1']['Button'] = pygame.Rect(50,2*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['belt1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['belt1']['Equiped'] = False
 
-    equipmentList['belt2'] = pygame.Rect(equipmentSpace + 50,2*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['belt2'] = False
+    equipmentInfo['belt2']['Button'] = pygame.Rect(equipmentSpace + 50,2*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['belt2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['belt2']['Equiped'] = False
 
-    equipmentList['belt3'] = pygame.Rect(2*equipmentSpace + 50,2*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['belt3'] = False
+    equipmentInfo['belt3']['Button'] = pygame.Rect(2*equipmentSpace + 50,2*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['belt3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['belt3']['Equiped'] = False
 
-    equipmentList['pants1'] = pygame.Rect(50,3*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['pants1'] = False
+    equipmentInfo['pants1']['Button'] = pygame.Rect(50,3*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['pants1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['pants1']['Equiped'] = False
 
-    equipmentList['pants2'] = pygame.Rect(equipmentSpace + 50,3*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['pants2'] = False
+    equipmentInfo['pants2']['Button'] = pygame.Rect(equipmentSpace + 50,3*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['pants2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['pants2']['Equiped'] = False
 
-    equipmentList['pants3'] = pygame.Rect(2*equipmentSpace + 50,3*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['pants3'] = False
+    equipmentInfo['pants3']['Button'] = pygame.Rect(2*equipmentSpace + 50,3*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['pants3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['pants3']['Equiped'] = False
 
-    equipmentList['boots1'] = pygame.Rect(50,4*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['boots1'] = False
+    equipmentInfo['boots1']['Button'] = pygame.Rect(50,4*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['boots1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['boots1']['Equiped'] = False
 
-    equipmentList['boots2'] = pygame.Rect(equipmentSpace + 50,4*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['boots2'] = False
+    equipmentInfo['boots2']['Button'] = pygame.Rect(equipmentSpace + 50,4*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['boots2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['boots2']['Equiped'] = False
 
-    equipmentList['boots3'] = pygame.Rect(2*equipmentSpace + 50,4*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['boots3'] = False
+    equipmentInfo['boots3']['Button'] = pygame.Rect(2*equipmentSpace + 50,4*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['boots3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['boots3']['Equiped'] = False
 
-    equipmentList['goggles1'] = pygame.Rect((WIDTH - equipmentSpace-15),50,equipmentSize, equipmentSize)
-    equiped['goggles1'] = False
+    equipmentInfo['goggles1']['Button'] = pygame.Rect((WIDTH - equipmentSpace-15),50,equipmentSize, equipmentSize)
+    equipmentInfo['goggles1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['goggles1']['Equiped'] = False
 
-    equipmentList['goggles2'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),50,equipmentSize, equipmentSize)
-    equiped['goggles2'] = False
+    equipmentInfo['goggles2']['Button'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),50,equipmentSize, equipmentSize)
+    equipmentInfo['goggles2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['goggles2']['Equiped'] = False
 
-    equipmentList['goggles3'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),50,equipmentSize, equipmentSize)
-    equiped['goggles3'] = False
+    equipmentInfo['goggles3']['Button'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),50,equipmentSize, equipmentSize)
+    equipmentInfo['goggles3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['goggles3']['Equiped'] = False
 
-    equipmentList['wrist1'] = pygame.Rect((WIDTH - equipmentSpace-15),equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['wrist1'] = False
+    equipmentInfo['wrist1']['Button'] = pygame.Rect((WIDTH - equipmentSpace-15),equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['wrist1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['wrist1']['Equiped'] = False
 
-    equipmentList['wrist2'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['wrist2'] = False
+    equipmentInfo['wrist2']['Button'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['wrist2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['wrist2']['Equiped'] = False
 
-    equipmentList['wrist3'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['wrist3'] = False
+    equipmentInfo['wrist3']['Button'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['wrist3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['wrist3']['Equiped'] = False
 
-    equipmentList['gloves1'] = pygame.Rect((WIDTH - equipmentSpace-15),2*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['gloves1'] = False
+    equipmentInfo['gloves1']['Button'] = pygame.Rect((WIDTH - equipmentSpace-15),2*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['gloves1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['gloves1']['Equiped'] = False
 
-    equipmentList['gloves2'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),2*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['gloves2'] = False
+    equipmentInfo['gloves2']['Button'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),2*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['gloves2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['gloves2']['Equiped'] = False
 
-    equipmentList['gloves3'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),2*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['gloves3'] = False
+    equipmentInfo['gloves3']['Button'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),2*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['gloves3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['gloves3']['Equiped'] = False
 
-    equipmentList['bandolier1'] = pygame.Rect((WIDTH - equipmentSpace-15),3*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['bandolier1'] = False
+    equipmentInfo['bandolier1']['Button'] = pygame.Rect((WIDTH - equipmentSpace-15),3*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['bandolier1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['bandolier1']['Equiped'] = False
 
-    equipmentList['bandolier2'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),3*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['bandolier2'] = False
+    equipmentInfo['bandolier2']['Button'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),3*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['bandolier2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['bandolier2']['Equiped'] = False
 
-    equipmentList['bandolier3'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),3*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['bandolier3'] = False
+    equipmentInfo['bandolier3']['Button'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),3*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['bandolier3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['bandolier3']['Equiped'] = False
 
-    equipmentList['weapon1'] = pygame.Rect((WIDTH - equipmentSpace-15),4*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['weapon1'] = False
+    equipmentInfo['weapon1']['Button'] = pygame.Rect((WIDTH - equipmentSpace-15),4*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['weapon1']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['weapon1']['Equiped'] = False
 
-    equipmentList['weapon2'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),4*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['weapon2'] = False
+    equipmentInfo['weapon2']['Button'] = pygame.Rect((WIDTH - 2*equipmentSpace-15),4*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['weapon2']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['weapon2']['Equiped'] = False
 
-    equipmentList['weapon3'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),4*equipmentSpace+50,equipmentSize, equipmentSize)
-    equiped['weapon3'] = False
+    equipmentInfo['weapon3']['Button'] = pygame.Rect((WIDTH - 3*equipmentSpace-15),4*equipmentSpace+50,equipmentSize, equipmentSize)
+    equipmentInfo['weapon3']['Image'] = pygame.image.load('question.png')
+    equipmentInfo['weapon3']['Equiped'] = False
 
-    return equiped, equipmentList, equipmentImages
+    return equipmentInfo
 
 def drawEquipment(equipmentList):
 
     for item in equipmentList:
-        pygame.draw.rect(screen, WHITE, equipmentList[item])
+        pygame.draw.rect(screen, WHITE, equipmentList[item]['Button'])
 
-    for item in equipmentList:
-        x = equipmentList[item].left
-        y = equipmentList[item].top + 5
-        miscMethods.draw_text(item, font, BLACK, screen, x,y)
+    """for item in equipmentList:
+        x = equipmentList[item]['Button'].left
+        y = equipmentList[item]["Button"].top + 5
+        miscMethods.draw_text(item, font, BLACK, screen, x,y)"""
 
-def equipGear(equipmentList, gearEquip, click):
+def equipGear(equipmentInfo, click):
     mx, my = pygame.mouse.get_pos()
     item1 = ""
     item2 = ""
     temp = ""
-    for item in equipmentList:
-        if equipmentList[item].collidepoint((mx,my)) and click:
-            equiped[item] = True
+    for item in equipmentInfo:
+        if equipmentInfo[item]['Button'].collidepoint((mx,my)) and item == 'helmet1':
+            displayGear(equipmentInfo[item])
+        if equipmentInfo[item]['Button'].collidepoint((mx,my)) and click:
+            equipmentInfo[item]['Equiped'] = True
             temp = item
             if '1' in temp:
                 item1 = temp.replace('1', '2')
@@ -149,44 +209,38 @@ def equipGear(equipmentList, gearEquip, click):
                 item1 = temp.replace('3', '1')
                 item2 = temp.replace('3', '2')
 
-            equiped[item1] = False
-            #print(equipmentList[item1])
-            equiped[item2] = False
+            equipmentInfo[item1]['Equiped'] = False
+            equipmentInfo[item2]['Equiped'] = False
 
-    for item in equiped:
-        if equiped[item]:
-            screen.blit(check, (equipmentList[item].left, equipmentList[item].top))
+        if equipmentInfo[item]['Equiped']:
+            screen.blit(check, (equipmentInfo[item]['Button'].left, equipmentInfo[item]['Button'].top))
 
-    return gearEquip
+    return equipmentInfo
 
-def equipment(equiped, equipmentList, equipmentImages):
+def displayGear(item):
+    miscMethods.draw_text(item['Name'], font, BLACK, screen, 700,930)
+    miscMethods.draw_text(item['Bonus'], font, BLACK, screen, 700,980)
+
+def equipment(equipmentInfo):
 
     while(True):
         screen.fill(GREY)
         #draw_text('Main Menu', font, WHITE, screen, 20, 20)
         #Get my mouse position
-        mx, my = pygame.mouse.get_pos()
+        #mx, my = pygame.mouse.get_pos()
+
         #Rect(X ALighn, Y Align, Width, Height)
         #Create paper doll with above specs
-
         character = pygame.Rect(668, 50, 584, equipmentSpace*5-30)
 
-
-
-
-        #Button does stuff when clicked
-
         #draw buttons
-        drawEquipment(equipmentList)
+        drawEquipment(equipmentInfo)
 
         pygame.draw.rect(screen, WHITE, character)
         #test = pygame.image.load('symbol.png')
 
-        for item in equipmentImages:
-            screen.blit(equipmentImages[item], (equipmentList[item].left, equipmentList[item].top+20))
-
-
-
+        for item in equipmentInfo:
+            screen.blit(equipmentInfo[item]['Image'], (equipmentInfo[item]['Button'].left, equipmentInfo[item]['Button'].top+20))
 
         click = False
         #check for button event
@@ -202,12 +256,12 @@ def equipment(equiped, equipmentList, equipmentImages):
                 if event.button == 1:
                     click = True
 
-        equiped = equipGear(equipmentList, equiped, click)
+        equipmentInfo = equipGear(equipmentInfo, click)
 
         #update display
         pygame.display.update()
         mainClock.tick(60)
 
 #remove in real version
-equiped, equipmentList, equipmentImages = initializeGear()
-equipment(equiped, equipmentList, equipmentImages)
+equipmentInfo = initializeGear()
+equipment(equipmentInfo)
