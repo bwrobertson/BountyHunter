@@ -266,8 +266,8 @@ def initializeGear():
     equipmentInfo['weapon3']['Image'] = pygame.image.load('assets/images/bow.png')
     equipmentInfo['weapon3']['Equiped'] = False
     equipmentInfo['weapon3']['Name'] = "Flamethrower"
-    equipmentInfo['weapon3']['NumAttacks'] = 1
-    equipmentInfo['weapon3']['AttDmg'] = 10
+    equipmentInfo['weapon3']['NumAttacks'] = 8
+    equipmentInfo['weapon3']['AttDmg'] = 2
 
     return equipmentInfo
 
